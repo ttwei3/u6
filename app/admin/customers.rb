@@ -5,7 +5,7 @@ ActiveAdmin.register Customer do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  actions :index, :edit, :update, :create, :destroy
+  actions :index, :edit, :update, :create, :new, :destroy
 
   permit_params :full_name, :phone_number, :email_address, :notes, :image
   #
