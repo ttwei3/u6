@@ -1,18 +1,2 @@
-<h1>Customer Information</h1>
-<ul>
-  <% @customers.each do |customer| %>
-    <li>
-      <p><strong>Full Name:</strong> <%= customer.full_name %></p>
-      <p><strong>Phone Number:</strong> <%= customer.phone_number %></p>
-      <p><strong>Email Address:</strong> <%= customer.email_address %></p>
-      <p><strong>Notes:</strong> <%= customer.notes %></p>
-      <% if customer.image.attached? %>
-        <p><strong>Image:</strong></p>
-        <%= image_tag(customer.image, height: '150px') %>
-      <% else %>
-        <p><strong>Image:</strong> No image available</p>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
-
+<!-- app/views/customers/index.html.erb -->
+<%= render partial: 'customer/customer', collection: @customers, as: :customer %>
