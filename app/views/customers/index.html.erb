@@ -5,5 +5,7 @@
     <div class="columns is-multiline">
       <%= render partial: "customer", collection: @customers, as: :customer %>
     </div>
+    <%= link_to 'Missing Email', customers_missing_email_path %>
+    <%= link_to 'Alphabetized', customers_alphabetized_path %>
   </div>
 </section>
