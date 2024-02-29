@@ -1,11 +1,11 @@
-<!-- app/views/customers/index.html.erb -->
+<!-- app/views/customers/alphabetized.html.erb -->
 <section class="section">
   <div class="container">
-    <h1 class="title">All Customers</h1>
+    <h1 class="title">Alphabetized Customers</h1>
     <div class="columns is-multiline">
       <%= render partial: "customer", collection: @customers, as: :customer %>
     </div>
+    <%= link_to 'All Customers', root_path, class: 'button is-primary' %>
     <%= link_to 'Missing Email', customers_missing_email_path, class: 'button is-link' %>
-    <%= link_to 'Alphabetized', customers_alphabetized_path, class: 'button is-link' %>
   </div>
 </section>
