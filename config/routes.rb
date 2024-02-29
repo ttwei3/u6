@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root "customer#index"
+  root "customers#index"
+  get 'customers/index'
   
-  get 'customer/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

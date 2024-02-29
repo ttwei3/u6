@@ -1,0 +1,9 @@
+<!-- app/views/customers/index.html.erb -->
+<section class="section">
+  <div class="container">
+    <h1 class="title">All Customers</h1>
+    <div class="columns is-multiline">
+      <%= render partial: "customer", collection: @customers, as: :customer %>
+    </div>
+  </div>
+</section>

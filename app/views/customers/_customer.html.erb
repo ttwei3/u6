@@ -1,0 +1,30 @@
+<!-- app/views/customers/_customer.html.erb -->
+<div class="column is-3">
+  <div class="card">
+    <div class="card-image">
+      <% if customer.image.attached? %>
+        <%= image_tag(customer.image, class: "card-img-top") %>
+      <% end %>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="subtitle is-6"><strong>Full Name:</strong> <%= customer.full_name %></p>
+          <% if customer.email_address.present? %>
+            <p class="subtitle is-6"><strong>Email Address:</strong> <%= customer.email_address %></p>
+          <% else %>
+            <p class="subtitle is-6"><strong>Email Address:</strong> Not provided</p>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="content">
+        <% if customer.notes.present? %>
+          <p><strong>Notes:</strong> <%= customer.notes %></p>
+        <% else %>
+          <p><strong>Notes:</strong> No notes available</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -75,3 +75,5 @@ gem "sassc-rails", "~> 2.1"
 gem "faker", "~> 3.2"
 
 gem "bulma-rails", "~> 0.9.4"
+
+gem "bulma", "~> 0.1.0"
